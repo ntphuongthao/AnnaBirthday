@@ -90,43 +90,17 @@ function Result() {
     });
   }, []);
 
-  const styles = {
-    container: {
-      height: "100vh",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      background: "linear-gradient(120deg, #f6d365 0%, #fda085 100%)",
-      textAlign: "center",
-      color: "black",
-      fontFamily: '"Comic Neue", cursive',
-      padding: "30px",
-    },
-    heading: {
-      fontSize: "4rem",
-      fontWeight: "bold",
-      margin: "0 0 20px 0",
-    },
-    text: {
-      fontSize: "2rem",
-      margin: "0",
-      color: "black",
-    },
-  };
-
   return (
-    <div style={styles.container}>
-      <h1 style={styles.heading}>Happy Birthday! 🎂</h1>
-      <p style={styles.text}>🐶🙀 Chúc mừng sinh nhật chó Anna 🐶🙀</p>
-      <p style={styles.text}>
+    <div className="result-container">
+      <h1 className="result-heading">Happy Birthday! 🎂</h1>
+      <p className="result-text">🐶🙀 Chúc mừng sinh nhật chó Anna 🐶🙀</p>
+      <p className="result-text">
         🎉 Wishing you all the joy and happiness in the world! 🎉
       </p>
-      <p style={styles.text}>
+      <p className="result-text">
         Chúc cô ấy tuổi 20 bớt xamloz và yêu thảo và quỳnh nhiều hơn 😅
       </p>
-      <br />
-      <img src="/annacho.jpeg" alt="Anna 1" height={400} />
+      <img src="/annacho.jpeg" alt="Anna 1" className="result-image" />
     </div>
   );
 }
