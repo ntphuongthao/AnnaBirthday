@@ -29,7 +29,6 @@ function Home() {
       <div className="app">
         <div>
           <img src="/dog.png" alt="Cute puppy" />
-          <h1>Is Anna a dog? 🐶</h1>
           <h1>Anna có phải là chó không? 🐶</h1>
         </div>
         <div>
@@ -93,13 +92,12 @@ function Result() {
   return (
     <div className="result-container">
       <h1 className="result-heading">Happy Birthday! 🎂</h1>
-      <p className="result-text">🙀 Chúc mừng sinh nhật chó Anna 🙀</p>
-      <p className="result-text">🐶🐶 Chó là Anna không phải tôi 🐶🐶</p>
+      <p className="result-text">🙀 Chúc mừng sinh nhật Anna 🙀</p>
       <p className="result-text">
         🎉 Wishing you all the joy and happiness in the world! 🎉
       </p>
       <p className="result-text">
-        Chúc cô ấy tuổi 20 bớt xamloz và yêu thảo và quỳnh nhiều hơn 😅
+        Chúc cô ấy tuổi 20 yêu thảo và quỳnh nhiều hơn 😅
       </p>
       <img src="/annacho.jpeg" alt="Anna 1" className="result-image" />
     </div>
