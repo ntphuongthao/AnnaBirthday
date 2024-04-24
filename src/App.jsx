@@ -37,7 +37,7 @@ function Home() {
           <button onClick={() => navigate("/choanna")}>
             👍🏻 A BIG YES!!! 👍🏻
           </button>
-          <button className="dodger" onMouseEnter={dodge} onTouchStart={dodge}>
+          <button className="dodger" onMouseEnter={dodge}>
             ❌ No ❌
           </button>
         </div>
