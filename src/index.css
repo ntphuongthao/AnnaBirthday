@@ -115,3 +115,11 @@ button:focus-visible {
     font-size: 18px;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  body,
+  .result-container {
+    background-color: white; /* Keeps background white in dark mode */
+    color: black; /* Keeps text black in dark mode */
+  }
+}

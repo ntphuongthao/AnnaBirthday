@@ -93,7 +93,8 @@ function Result() {
   return (
     <div className="result-container">
       <h1 className="result-heading">Happy Birthday! 🎂</h1>
-      <p className="result-text">🐶🙀 Chúc mừng sinh nhật chó Anna 🐶🙀</p>
+      <p className="result-text">🙀 Chúc mừng sinh nhật chó Anna 🙀</p>
+      <p className="result-text">🐶🐶 Chó là Anna không phải tôi 🐶🐶</p>
       <p className="result-text">
         🎉 Wishing you all the joy and happiness in the world! 🎉
       </p>
