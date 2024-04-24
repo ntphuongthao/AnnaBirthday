@@ -74,7 +74,7 @@ button:focus-visible {
 @media (min-width: 768px) {
   #root {
     padding: 2rem;
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .app {
@@ -109,6 +109,7 @@ button:focus-visible {
 @media (min-width: 1280px) {
   #root {
     max-width: 1280px; /* Max width for large screens */
+    max-height: 800px;
   }
 
   footer {
@@ -121,5 +122,15 @@ button:focus-visible {
   .result-container {
     background-color: white; /* Keeps background white in dark mode */
     color: black; /* Keeps text black in dark mode */
+  }
+
+  button {
+    background-color: pink; /* Default pink background */
+    color: black; /* Default black text */
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #d1d1d1; /* Lighter shade on hover */
   }
 }
