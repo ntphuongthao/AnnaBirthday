@@ -144,17 +144,48 @@ function Result() {
     });
   }, []);
 
+  const emojiConfig = [
+    { emoji: "🎂", count: 2 },
+    { emoji: "🐶", count: 15 },
+    { emoji: "❤️", count: 2 },
+    { emoji: "💚", count: 2 },
+    { emoji: "💙", count: 2 },
+    { emoji: "💛", count: 2 },
+    { emoji: "💜", count: 2 },
+    { emoji: "💖", count: 2 },
+    { emoji: "💝", count: 2 },
+    { emoji: "💘", count: 2 },
+
+    { emoji: "🧑🏼‍💻", count: 2 },
+  ];
+
   return (
     <div className="result-container">
-      <h1 className="result-heading">Happy Birthday Anna! 🎂</h1>
+      <h1 className="result-heading">HAPPY BORK-DAY ANNA! 🐶🎉</h1>
       <p className="result-text">🙀 Chúc mừng sinh nhật tuổi 21 của Anna 🙀</p>
       <p className="result-text">
         🎉 Wishing you all the joy and happiness in the world! 🎉
       </p>
       <p className="result-text">
-        Chúc cô ấy tuổi 21 bớt trễ hẹn và nhẹ nhàng hơn nha 😅
+        🎈 May your birthday be as legendary as your trễ hẹn skills 😅 Wishing
+        you more cake, less stress, and fewer alarms ignored 🕒💤
       </p>
       <img src="/annacho.jpeg" alt="Anna 1" className="result-image" />
+      {emojiConfig.flatMap(({ emoji, count }) =>
+        [...Array(count)].map((_, i) => (
+          <span
+            key={`${emoji}-${i}`}
+            className="meme-icon"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              fontSize: `${2 + Math.random() * 2}rem`,
+            }}
+          >
+            {emoji}
+          </span>
+        ))
+      )}
     </div>
   );
 }
