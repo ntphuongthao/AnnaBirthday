@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -10,6 +10,7 @@ import confetti from "canvas-confetti";
 
 function Home() {
   const navigate = useNavigate();
+  const yesButtonRef = useRef(null);
 
   const dodge = (e) => {
     const dodgeDistance = 120; // max distance to dodge in pixels
@@ -24,6 +25,44 @@ function Home() {
     button.style.left = `${randomHorizontal}px`;
   };
 
+  const handleYesClick = () => {
+    playDogSound();
+
+    if (yesButtonRef.current) {
+      yesButtonRef.current.classList.add("shake");
+      setTimeout(() => yesButtonRef.current?.classList.remove("shake"), 500);
+    }
+
+    navigate("/choanna");
+  };
+
+  const playDogSound = () => {
+    const audio = new Audio("/dog-barking.mp3");
+    audio.loop = true; // Keep playing in loop
+    audio.play();
+
+    // Stop after 10 seconds
+    setTimeout(() => {
+      audio.pause();
+      audio.currentTime = 0; // Reset
+    }, 3000);
+  };
+
+  const stopDogSound = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  };
+
+  const handleYesHover = () => {
+    playDogSound();
+  };
+
+  const handleYesLeave = () => {
+    stopDogSound();
+  };
+
   return (
     <>
       <div className="app">
@@ -32,8 +71,20 @@ function Home() {
           <h1>Anna có phải là chó không? 🐶</h1>
         </div>
         <div>
-          <button onClick={() => navigate("/choanna")}>👍🏻 Yes 👍🏻</button>
-          <button onClick={() => navigate("/choanna")}>
+          <button
+            ref={yesButtonRef}
+            onClick={handleYesClick}
+            onMouseEnter={handleYesHover}
+            onMouseLeave={handleYesLeave}
+          >
+            👍🏻 Yes 👍🏻
+          </button>
+          <button
+            ref={yesButtonRef}
+            onClick={handleYesClick}
+            onMouseEnter={handleYesHover}
+            onMouseLeave={handleYesLeave}
+          >
             👍🏻 A BIG YES!!! 👍🏻
           </button>
           <button className="dodger" onMouseEnter={dodge}>
@@ -100,7 +151,6 @@ function Result() {
         Chúc cô ấy tuổi 21 bớt trễ hẹn và nhẹ nhàng hơn nha 😅
       </p>
       <img src="/annacho.jpeg" alt="Anna 1" className="result-image" />
-      <img src="/anna-21.jpeg" alt="Anna 21 tuoi" className="result-image" />
     </div>
   );
 }
