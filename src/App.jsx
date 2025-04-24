@@ -43,7 +43,7 @@ function Home() {
       </div>
       <footer>
         <p>All rights reserved by Thao Nguyen</p>{" "}
-        <p>❤️ From Wilson with Love ❤️</p>
+        <p>❤️ From Thao Nguyen with Love ❤️</p>
       </footer>
     </>
   );
@@ -91,13 +91,13 @@ function Result() {
 
   return (
     <div className="result-container">
-      <h1 className="result-heading">Happy Birthday! 🎂</h1>
-      <p className="result-text">🙀 Chúc mừng sinh nhật Anna 🙀</p>
+      <h1 className="result-heading">Happy Birthday Anna! 🎂</h1>
+      <p className="result-text">🙀 Chúc mừng sinh nhật tuổi 21 của Anna 🙀</p>
       <p className="result-text">
         🎉 Wishing you all the joy and happiness in the world! 🎉
       </p>
       <p className="result-text">
-        Chúc cô ấy tuổi 20 yêu thảo và quỳnh nhiều hơn 😅
+        Chúc cô ấy tuổi 21 bớt trễ hẹn và nhẹ nhàng hơn nha 😅
       </p>
       <img src="/annacho.jpeg" alt="Anna 1" className="result-image" />
     </div>
