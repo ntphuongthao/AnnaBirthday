@@ -168,7 +168,9 @@ function Result() {
       </p>
       <p className="result-text">
         🎈 May your birthday be as legendary as your trễ hẹn skills 😅 Wishing
-        you more cake, less stress, and fewer alarms ignored 🕒💤
+        you more cake, less stress, and fewer alarms ignored 🕒💤 Nói vậy thôi
+        chứ chúc em đạt được nhiều điều tuyệt vời nhất nha! Mục tiêu cá nhân và
+        công việc đều thành công nhé!
       </p>
       <img src="/annacho.jpeg" alt="Anna 1" className="result-image" />
       {emojiConfig.flatMap(({ emoji, count }) =>
