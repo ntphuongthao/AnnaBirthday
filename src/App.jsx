@@ -45,7 +45,7 @@ function Home() {
     setTimeout(() => {
       audio.pause();
       audio.currentTime = 0; // Reset
-    }, 3000);
+    }, 10000);
   };
 
   const stopDogSound = () => {
@@ -87,7 +87,11 @@ function Home() {
           >
             👍🏻 A BIG YES!!! 👍🏻
           </button>
-          <button className="dodger" onMouseEnter={dodge}>
+          <button
+            className="dodger"
+            onMouseEnter={dodge} // For desktop
+            onTouchStart={dodge} // For mobile
+          >
             ❌ No ❌
           </button>
         </div>
