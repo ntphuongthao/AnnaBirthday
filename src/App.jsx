@@ -100,6 +100,7 @@ function Result() {
         Chúc cô ấy tuổi 21 bớt trễ hẹn và nhẹ nhàng hơn nha 😅
       </p>
       <img src="/annacho.jpeg" alt="Anna 1" className="result-image" />
+      <img src="/anna-21.jpeg" alt="Anna 21 tuoi" className="result-image" />
     </div>
   );
 }
